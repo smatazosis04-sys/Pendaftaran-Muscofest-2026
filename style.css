@@ -1,0 +1,412 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7fb;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e3a8a
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Lingkaran dekorasi */
+
+.header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border-radius: 50%;
+
+    top: -150px;
+    left: -100px;
+}
+
+
+.header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border-radius: 50%;
+
+    bottom: -200px;
+    right: -100px;
+}
+
+
+/* Isi header */
+
+.header-content {
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+/* Judul MUSCOFEST */
+
+.header h1 {
+
+    font-size: 60px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Subjudul */
+
+.header h2 {
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+
+/* Deskripsi */
+
+.header p {
+
+    font-size: 16px;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   REGISTRATION
+========================================= */
+
+.registration {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+
+/* Judul */
+
+.title {
+
+    text-align: center;
+
+    font-size: 35px;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   COMPETITION CONTAINER
+========================================= */
+
+.competition-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   COMPETITION CARD
+========================================= */
+
+.competition-card {
+
+    display: block;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efek ketika mouse berada di atas kartu */
+
+.competition-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   FOTO LOMBA
+========================================= */
+
+.competition-card img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* Efek zoom foto */
+
+.competition-card:hover img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   INFORMASI KARTU
+========================================= */
+
+.card-info {
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.card-info h3 {
+
+    font-size: 21px;
+
+    color: #1e3a8a;
+
+    margin-bottom: 5px;
+}
+
+
+.card-info p {
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background-color: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+.footer h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.footer p {
+
+    font-size: 14px;
+
+    color: #d1d5db;
+}
+
+
+.footer .copyright {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .competition-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .header h1 {
+
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================================
+   HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 60px 20px;
+    }
+
+
+    .header h1 {
+
+        font-size: 38px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .header h2 {
+
+        font-size: 20px;
+    }
+
+
+    .header p {
+
+        font-size: 14px;
+    }
+
+
+    .registration {
+
+        padding: 50px 18px;
+    }
+
+
+    .title {
+
+        font-size: 28px;
+    }
+
+
+    .competition-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .competition-card img {
+
+        height: 240px;
+    }
+
+}
